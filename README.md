@@ -87,6 +87,4 @@ Deberán escribir casos de test para probar su programa. Como equipo tendrán qu
 Todos los integrantes del equipo deben participar de la escritura de tests (contribuyendo al menos uno de los casos).
 
 
-prueba fer
-
 
