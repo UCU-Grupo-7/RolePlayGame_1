@@ -1,21 +1,14 @@
+
 namespace Library
 {
-    public interface IMage
-        {
-            void Magic();
-        }
-
-        public class Wizard : ICharacter, IMage
-        {
-            public void Magic()
-            {
-                Console.WriteLine("Add SpellBook to this wizard!");
-            }
+        public class Wizard : ICharacter
+        {  
 
             public string Name { get; set; }
             public int Health { get; set; }
             public int Damage { get; set; }
             public int Defense { get; set; }
+            public Inventory<Equipment> Inventory;
 
             public Wizard(string name, int health, int damage, int defense)
             {
@@ -24,19 +17,26 @@ namespace Library
                 this.Damage = damage;
                 this.Defense = defense;
 
-
+                //Magic();
             }
 
-            public void Attack()
+
+            public void Attack(ICharacter character)
             {
-                
+                character.Health = character.Health + character.Defense - this.Damage;
             }
-            public void Heal()
+            public void Heal(int heal)
             {
-                
+                this.Health = this.Health + heal;
             }
-
             
+            //void Magic()
+            //{
+            //    SpellBook SpellBook = new SpellBook("Morellonomicon", 0);
+            //    SpellBook.Magics();
+            //    Inventory.AddItem(SpellBook);
+            //}
+
             
         }
 }

@@ -8,6 +8,7 @@ namespace Library
         public int Health { get; set; }
         public int Damage { get; set; }
         public int Defense { get; set; }
+        public Inventory<Equipment> Inventory { get; set; }
 
         public Elf(string name, int health, int damage, int defense)
         {
@@ -19,13 +20,13 @@ namespace Library
 
         }
 
-        public void Attack()
+        public void Attack(ICharacter character)
         {
-            
+            character.Health = character.Health + character.Defense - this.Damage;
         }
-        public void Heal()
+        public void Heal(int heal)
         {
-            
+            this.Health = this.Health + heal;
         }
     }
 }

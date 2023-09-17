@@ -5,12 +5,14 @@ namespace Library
 {
     public interface ICharacter
     {
-        void Attack();
-        void Heal();
-        //string Name { get; set; }
-        //int Health { get; set; }
-        //int Damage { get; set; }
-        //int Defense { get; set; }
+        void Attack(ICharacter character);
+        void Heal(int heal);
+
+        //Inventory<Equipment> Inventory { get; set; }
+        string Name { get; set; }
+        int Health { get; set; }
+        int Damage { get; set; }
+        int Defense { get; set; }
     }
 
     

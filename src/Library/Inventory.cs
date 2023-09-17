@@ -1,25 +1,18 @@
-namespace Library
 using System.Collections.Generic;
-{
-    public class Inventory
-    {
-        public Inventory()
 
-        private List<IEquipment> Items = new List<IEquipment>();
-        public void AddItem(IEquipment item)
+namespace Library
+{
+    public class Inventory<T>
+    {
+        private IList<T> items = new List<T>();
+
+        public void AddItem(T item)
         {
-            this.Items.Add(item)
+            this.items.Add(item);
         }
-        public void RemoveItem(IEquipment item)
+        public void RemoveItem(T item)
         {
-            this.Items.Remove(item)
-        }
-        public void PrintItems()
-        {
-            foreach (IEquipment item in Items)
-            {
-                Console.WriteLine($"")
-            }
+            this.items.Remove(item);
         }
     }
 }
