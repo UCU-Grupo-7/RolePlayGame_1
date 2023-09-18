@@ -17,6 +17,8 @@ namespace Library
                 this.Damage = damage;
                 this.Defense = defense;
 
+                this.Inventory = new Inventory<Equipment>();
+
                 //Magic();
             }
 

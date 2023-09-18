@@ -20,7 +20,7 @@ namespace Library
 
         }
 
-        public class Axe
+        public class Axe : Equipment
         {
             public string Name { get; }
 

@@ -24,6 +24,7 @@ namespace RolePlay
             Console.WriteLine(Harry.Health);
 
             Harry.Inventory.AddItem(Excalibur);
+            Console.WriteLine(Harry.Inventory);
         }
     }
 }

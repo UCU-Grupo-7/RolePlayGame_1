@@ -4,15 +4,23 @@ namespace Library
 {
     public class Inventory<T>
     {
-        private IList<T> items = new List<T>();
+        private IList<T> Items = new List<T>();
 
         public void AddItem(T item)
         {
-            this.items.Add(item);
+            this.Items.Add(item);
         }
         public void RemoveItem(T item)
         {
-            this.items.Remove(item);
+            this.Items.Remove(item);
+        }
+
+        public void PrintInventory(T items)
+        {
+            foreach (T item in Items)
+            {
+                Console.WriteLine("Items");
+            }
         }
     }
 }
